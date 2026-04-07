@@ -61,7 +61,7 @@ namespace Biblioteca
         private void btnAcoes_Click(object sender, EventArgs e)
         {
             {
-                if (btnAjuste.Text == "Atualizar")
+                if (btnAcoes.Text == "Excluir")
                 {
                     if (lboLivros != null) return;
                     LivrosRow livro = lboLivros.SelectedItem as LivrosRow;
@@ -70,16 +70,75 @@ namespace Biblioteca
                     livros.Delete(livro.LivroID);
                     AtualizarLista();
                     limparElementos();
-                    btnAjuste.Text = "Atualizar Lista";
-                    btnAcoes.Text = "cadastrar";
+                    btnAcoes.Text = "Atualizar Lista";
+                    btnAjuste.Text = "cadastrar";
                 }
             }
         }
 
         private void btnAjuste_Click(object sender, EventArgs e)
         {
-            if (btnAjuste == null) return;
-            
+            //lboLivros.ClearSelected();
+            if (btnAjuste.Text == "Cadastrar")
+            {
+                string titulo = txtTitulo.Text;
+                string autor = txtAutor.Text;
+                string editora = txtEditora.Text;
+                string genero = txtGenero.Text;
+                string isbn = txtISBN.Text;
+                try
+                {
+                    int quantidade = int.Parse(txtQuantidade.Text);
+                    LivrosTableAdapter livros = new LivrosTableAdapter();
+                    livros.Insert(titulo, genero, autor, editora, isbn, quantidade);
+                    limparElementos();
+                    AtualizarLista();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, ex.GetType().Name);
+                }
+            }
+            else
+            {
+                if (lboLivros.SelectedItem == null)
+                {
+                    AtualizarLista();
+                    limparElementos();
+                    lboLivros.ClearSelected();
+                    return;
+                }
+                LivrosRow livro = lboLivros.SelectedItem as LivrosRow;
+                if (livro == null) return;
+                string titulo = txtTitulo.Text;
+                string autor = txtAutor.Text;
+                string editora = txtEditora.Text;
+                string genero = txtGenero.Text;
+                string isbn = txtISBN.Text;
+                try
+                {
+                    int quantidade = int.Parse(txtQuantidade.Text);
+                    LivrosTableAdapter livros = new LivrosTableAdapter();
+                    livros.Update(livro.LivroID, livro.Titulo, livro.Autor, livro.Editora, livro.Genero, livro.ISBN, livro.QuantidadeDisponivel);
+                    btnAcoes.Text = "Cadastro";
+                    btnAjuste.Text = "Atualizar";
+                    AtualizarLista();
+                    limparElementos();
+                }
+                catch
+                {
+                    MessageBox.Show("Numero invalido", "Eero de digitacao");
+                }
+            }                                           
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            lboLivros.ClearSelected();
+            AtualizarLista();
+            limparElementos();
+            btnAcoes.Text = "Cadastrar";
+            btnAjuste.Text = "Atualizar lista";
         }
     }
 }
