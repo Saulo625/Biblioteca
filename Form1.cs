@@ -45,8 +45,8 @@ namespace Biblioteca
             if (lboLivros.SelectedItem == null) return;
             LivrosRow livro =lboLivros.SelectedItem as LivrosRow;
             if (livro == null) return;
-            btnAcoes.Text = "excluir";
-            btnAjuste.Text = "Atualizar";
+            btnAjuste.Text = "excluir";
+            btnAcoes.Text = "Atualizar";
             txtTitulo.Text = livro.Titulo;
             txtAutor.Text = livro.Autor;
             txtEditora.Text = livro.Editora;
@@ -58,20 +58,28 @@ namespace Biblioteca
 
         }
 
-        private void btnAtualizar_Click(object sender, EventArgs e)
+        private void btnAcoes_Click(object sender, EventArgs e)
         {
-            if (btnAcoes.Text == "Excluir")
             {
-                if (lboLivros != null) return;
-                LivrosRow livro = lboLivros.SelectedItem as LivrosRow;
-                if (livro == null) return;
-                LivrosTableAdapter livros = new LivrosTableAdapter();
-                livros.Delete(livro.LivroID);
-                AtualizarLista();
-                limparElementos();
-                btnAcoes.Text = "Atualizar Lista";
-                btnAjuste.Text = "cadastrar";
+                if (btnAjuste.Text == "Atualizar")
+                {
+                    if (lboLivros != null) return;
+                    LivrosRow livro = lboLivros.SelectedItem as LivrosRow;
+                    if (livro == null) return;
+                    LivrosTableAdapter livros = new LivrosTableAdapter();
+                    livros.Delete(livro.LivroID);
+                    AtualizarLista();
+                    limparElementos();
+                    btnAjuste.Text = "Atualizar Lista";
+                    btnAcoes.Text = "cadastrar";
+                }
             }
+        }
+
+        private void btnAjuste_Click(object sender, EventArgs e)
+        {
+            if (btnAjuste == null) return;
+            
         }
     }
 }
