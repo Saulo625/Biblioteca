@@ -56,24 +56,23 @@ namespace Biblioteca
 
 
 
+        }         
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FormUsuarios form = new FormUsuarios(this);
+            form.Show();
+
         }
 
-        private void btnAcoes_Click(object sender, EventArgs e)
+        private void btnLimpar_Click(object sender, EventArgs e)
         {
-            {
-                if (btnAcoes.Text == "Excluir")
-                {
-                    if (lboLivros != null) return;
-                    LivrosRow livro = lboLivros.SelectedItem as LivrosRow;
-                    if (livro == null) return;
-                    LivrosTableAdapter livros = new LivrosTableAdapter();
-                    livros.Delete(livro.LivroID);
-                    AtualizarLista();
-                    limparElementos();
-                    btnAcoes.Text = "Atualizar Lista";
-                    btnAjuste.Text = "cadastrar";
-                }
-            }
+            lboLivros.ClearSelected();
+            AtualizarLista();
+            limparElementos();
+            btnAcoes.Text = "Cadastrar";
+            btnAjuste.Text = "Atualizar lista";
         }
 
         private void btnAjuste_Click(object sender, EventArgs e)
@@ -129,16 +128,26 @@ namespace Biblioteca
                 {
                     MessageBox.Show("Numero invalido", "Eero de digitacao");
                 }
-            }                                           
+            }
         }
 
-        private void btnLimpar_Click(object sender, EventArgs e)
+        private void btnAcoes_Click(object sender, EventArgs e)
         {
-            lboLivros.ClearSelected();
-            AtualizarLista();
-            limparElementos();
-            btnAcoes.Text = "Cadastrar";
-            btnAjuste.Text = "Atualizar lista";
+            {
+                if (btnAcoes.Text == "Excluir")
+                {
+                    if (lboLivros != null) return;
+                    LivrosRow livro = lboLivros.SelectedItem as LivrosRow;
+                    if (livro == null) return;
+                    LivrosTableAdapter livros = new LivrosTableAdapter();
+                    livros.Delete(livro.LivroID);
+                    AtualizarLista();
+                    limparElementos();
+                    btnAcoes.Text = "Atualizar Lista";
+                    btnAjuste.Text = "cadastrar";
+                }
+            }
         }
     }
 }
+

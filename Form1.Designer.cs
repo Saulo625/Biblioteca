@@ -29,21 +29,22 @@
         private void InitializeComponent()
         {
             this.lboLivros = new System.Windows.Forms.ListBox();
-            this.txtTitulo = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txtGenero = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txtQuantidade = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txtISBN = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txtEditora = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txtAutor = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
-            this.btnAjuste = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnAcoes = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnLimpar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnUsuarios = new System.Windows.Forms.Button();
+            this.btnAcoes = new System.Windows.Forms.Button();
+            this.btnAjuste = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.txtISBN = new System.Windows.Forms.TextBox();
+            this.txtQuantidade = new System.Windows.Forms.TextBox();
+            this.txtEditora = new System.Windows.Forms.TextBox();
+            this.txtGenero = new System.Windows.Forms.TextBox();
+            this.txtAutor = new System.Windows.Forms.TextBox();
+            this.txtTitulo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lboLivros
@@ -55,114 +56,6 @@
             this.lboLivros.Size = new System.Drawing.Size(357, 368);
             this.lboLivros.TabIndex = 12;
             this.lboLivros.SelectedIndexChanged += new System.EventHandler(this.lboLivros_SelectedIndexChanged);
-            // 
-            // txtTitulo
-            // 
-            this.txtTitulo.BackColor = System.Drawing.Color.DimGray;
-            this.txtTitulo.Depth = 0;
-            this.txtTitulo.ForeColor = System.Drawing.SystemColors.Control;
-            this.txtTitulo.Hint = "";
-            this.txtTitulo.Location = new System.Drawing.Point(29, 60);
-            this.txtTitulo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtTitulo.Name = "txtTitulo";
-            this.txtTitulo.PasswordChar = '\0';
-            this.txtTitulo.SelectedText = "";
-            this.txtTitulo.SelectionLength = 0;
-            this.txtTitulo.SelectionStart = 0;
-            this.txtTitulo.Size = new System.Drawing.Size(294, 23);
-            this.txtTitulo.TabIndex = 16;
-            this.txtTitulo.Text = "Digite o titulo do livro";
-            this.txtTitulo.UseSystemPasswordChar = false;
-            // 
-            // txtGenero
-            // 
-            this.txtGenero.BackColor = System.Drawing.Color.DimGray;
-            this.txtGenero.Depth = 0;
-            this.txtGenero.ForeColor = System.Drawing.SystemColors.Control;
-            this.txtGenero.Hint = "";
-            this.txtGenero.Location = new System.Drawing.Point(29, 188);
-            this.txtGenero.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtGenero.Name = "txtGenero";
-            this.txtGenero.PasswordChar = '\0';
-            this.txtGenero.SelectedText = "";
-            this.txtGenero.SelectionLength = 0;
-            this.txtGenero.SelectionStart = 0;
-            this.txtGenero.Size = new System.Drawing.Size(294, 23);
-            this.txtGenero.TabIndex = 17;
-            this.txtGenero.Text = "Digite o genero";
-            this.txtGenero.UseSystemPasswordChar = false;
-            // 
-            // txtQuantidade
-            // 
-            this.txtQuantidade.BackColor = System.Drawing.Color.DimGray;
-            this.txtQuantidade.Depth = 0;
-            this.txtQuantidade.ForeColor = System.Drawing.SystemColors.Control;
-            this.txtQuantidade.Hint = "";
-            this.txtQuantidade.Location = new System.Drawing.Point(29, 325);
-            this.txtQuantidade.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtQuantidade.Name = "txtQuantidade";
-            this.txtQuantidade.PasswordChar = '\0';
-            this.txtQuantidade.SelectedText = "";
-            this.txtQuantidade.SelectionLength = 0;
-            this.txtQuantidade.SelectionStart = 0;
-            this.txtQuantidade.Size = new System.Drawing.Size(294, 23);
-            this.txtQuantidade.TabIndex = 18;
-            this.txtQuantidade.Text = "Digite a quantidade";
-            this.txtQuantidade.UseSystemPasswordChar = false;
-            // 
-            // txtISBN
-            // 
-            this.txtISBN.BackColor = System.Drawing.Color.DimGray;
-            this.txtISBN.Depth = 0;
-            this.txtISBN.ForeColor = System.Drawing.SystemColors.Control;
-            this.txtISBN.Hint = "";
-            this.txtISBN.Location = new System.Drawing.Point(29, 387);
-            this.txtISBN.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtISBN.Name = "txtISBN";
-            this.txtISBN.PasswordChar = '\0';
-            this.txtISBN.SelectedText = "";
-            this.txtISBN.SelectionLength = 0;
-            this.txtISBN.SelectionStart = 0;
-            this.txtISBN.Size = new System.Drawing.Size(294, 23);
-            this.txtISBN.TabIndex = 19;
-            this.txtISBN.Text = "Digite o ISBN";
-            this.txtISBN.UseSystemPasswordChar = false;
-            // 
-            // txtEditora
-            // 
-            this.txtEditora.BackColor = System.Drawing.Color.DimGray;
-            this.txtEditora.Depth = 0;
-            this.txtEditora.ForeColor = System.Drawing.SystemColors.Control;
-            this.txtEditora.Hint = "";
-            this.txtEditora.Location = new System.Drawing.Point(29, 255);
-            this.txtEditora.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtEditora.Name = "txtEditora";
-            this.txtEditora.PasswordChar = '\0';
-            this.txtEditora.SelectedText = "";
-            this.txtEditora.SelectionLength = 0;
-            this.txtEditora.SelectionStart = 0;
-            this.txtEditora.Size = new System.Drawing.Size(294, 23);
-            this.txtEditora.TabIndex = 20;
-            this.txtEditora.Text = "Digite a editora";
-            this.txtEditora.UseSystemPasswordChar = false;
-            // 
-            // txtAutor
-            // 
-            this.txtAutor.BackColor = System.Drawing.Color.DimGray;
-            this.txtAutor.Depth = 0;
-            this.txtAutor.ForeColor = System.Drawing.SystemColors.Control;
-            this.txtAutor.Hint = "";
-            this.txtAutor.Location = new System.Drawing.Point(29, 121);
-            this.txtAutor.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtAutor.Name = "txtAutor";
-            this.txtAutor.PasswordChar = '\0';
-            this.txtAutor.SelectedText = "";
-            this.txtAutor.SelectionLength = 0;
-            this.txtAutor.SelectionStart = 0;
-            this.txtAutor.Size = new System.Drawing.Size(294, 23);
-            this.txtAutor.TabIndex = 21;
-            this.txtAutor.Text = "Digite o nome do autor";
-            this.txtAutor.UseSystemPasswordChar = false;
             // 
             // materialLabel1
             // 
@@ -242,82 +135,124 @@
             this.materialLabel6.TabIndex = 27;
             this.materialLabel6.Text = "ISBN:";
             // 
-            // btnAjuste
+            // btnUsuarios
             // 
-            this.btnAjuste.AutoSize = true;
-            this.btnAjuste.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnAjuste.BackColor = System.Drawing.Color.Silver;
-            this.btnAjuste.Depth = 0;
-            this.btnAjuste.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAjuste.Location = new System.Drawing.Point(63, 446);
-            this.btnAjuste.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnAjuste.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnAjuste.Name = "btnAjuste";
-            this.btnAjuste.Primary = false;
-            this.btnAjuste.Size = new System.Drawing.Size(91, 36);
-            this.btnAjuste.TabIndex = 28;
-            this.btnAjuste.Text = "Cadastrar";
-            this.btnAjuste.UseVisualStyleBackColor = false;
-            this.btnAjuste.Click += new System.EventHandler(this.btnAjuste_Click);
+            this.btnUsuarios.BackColor = System.Drawing.Color.Gray;
+            this.btnUsuarios.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.Location = new System.Drawing.Point(31, 503);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(708, 39);
+            this.btnUsuarios.TabIndex = 31;
+            this.btnUsuarios.Text = "Usuarios";
+            this.btnUsuarios.UseVisualStyleBackColor = false;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // btnAcoes
             // 
-            this.btnAcoes.AutoSize = true;
-            this.btnAcoes.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnAcoes.BackColor = System.Drawing.Color.Silver;
-            this.btnAcoes.Depth = 0;
-            this.btnAcoes.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAcoes.Location = new System.Drawing.Point(245, 446);
-            this.btnAcoes.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnAcoes.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnAcoes.BackColor = System.Drawing.Color.Gray;
+            this.btnAcoes.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAcoes.Location = new System.Drawing.Point(31, 446);
             this.btnAcoes.Name = "btnAcoes";
-            this.btnAcoes.Primary = false;
-            this.btnAcoes.Size = new System.Drawing.Size(125, 36);
-            this.btnAcoes.TabIndex = 29;
-            this.btnAcoes.Text = "Atualizar lista";
+            this.btnAcoes.Size = new System.Drawing.Size(137, 36);
+            this.btnAcoes.TabIndex = 32;
+            this.btnAcoes.Text = "Cadastrar";
             this.btnAcoes.UseVisualStyleBackColor = false;
             this.btnAcoes.Click += new System.EventHandler(this.btnAcoes_Click);
             // 
+            // btnAjuste
+            // 
+            this.btnAjuste.BackColor = System.Drawing.Color.Gray;
+            this.btnAjuste.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAjuste.Location = new System.Drawing.Point(186, 446);
+            this.btnAjuste.Name = "btnAjuste";
+            this.btnAjuste.Size = new System.Drawing.Size(137, 36);
+            this.btnAjuste.TabIndex = 33;
+            this.btnAjuste.Text = "Atualizar Lista";
+            this.btnAjuste.UseVisualStyleBackColor = false;
+            this.btnAjuste.Click += new System.EventHandler(this.btnAjuste_Click);
+            // 
             // btnLimpar
             // 
-            this.btnLimpar.AutoSize = true;
-            this.btnLimpar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnLimpar.BackColor = System.Drawing.Color.Silver;
-            this.btnLimpar.Depth = 0;
-            this.btnLimpar.Font = new System.Drawing.Font("Arial Narrow", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnLimpar.Location = new System.Drawing.Point(522, 446);
-            this.btnLimpar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnLimpar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnLimpar.BackColor = System.Drawing.Color.Gray;
+            this.btnLimpar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpar.Location = new System.Drawing.Point(382, 446);
             this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Primary = false;
-            this.btnLimpar.Size = new System.Drawing.Size(62, 36);
-            this.btnLimpar.TabIndex = 30;
+            this.btnLimpar.Size = new System.Drawing.Size(357, 36);
+            this.btnLimpar.TabIndex = 34;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // txtISBN
+            // 
+            this.txtISBN.BackColor = System.Drawing.Color.Gray;
+            this.txtISBN.Location = new System.Drawing.Point(29, 386);
+            this.txtISBN.Name = "txtISBN";
+            this.txtISBN.Size = new System.Drawing.Size(315, 20);
+            this.txtISBN.TabIndex = 45;
+            // 
+            // txtQuantidade
+            // 
+            this.txtQuantidade.BackColor = System.Drawing.Color.Gray;
+            this.txtQuantidade.Location = new System.Drawing.Point(31, 324);
+            this.txtQuantidade.Name = "txtQuantidade";
+            this.txtQuantidade.Size = new System.Drawing.Size(313, 20);
+            this.txtQuantidade.TabIndex = 46;
+            // 
+            // txtEditora
+            // 
+            this.txtEditora.BackColor = System.Drawing.Color.Gray;
+            this.txtEditora.Location = new System.Drawing.Point(29, 254);
+            this.txtEditora.Name = "txtEditora";
+            this.txtEditora.Size = new System.Drawing.Size(315, 20);
+            this.txtEditora.TabIndex = 47;
+            // 
+            // txtGenero
+            // 
+            this.txtGenero.BackColor = System.Drawing.Color.Gray;
+            this.txtGenero.Location = new System.Drawing.Point(29, 187);
+            this.txtGenero.Name = "txtGenero";
+            this.txtGenero.Size = new System.Drawing.Size(315, 20);
+            this.txtGenero.TabIndex = 48;
+            // 
+            // txtAutor
+            // 
+            this.txtAutor.BackColor = System.Drawing.Color.Gray;
+            this.txtAutor.Location = new System.Drawing.Point(29, 120);
+            this.txtAutor.Name = "txtAutor";
+            this.txtAutor.Size = new System.Drawing.Size(315, 20);
+            this.txtAutor.TabIndex = 49;
+            // 
+            // txtTitulo
+            // 
+            this.txtTitulo.BackColor = System.Drawing.Color.Gray;
+            this.txtTitulo.Location = new System.Drawing.Point(29, 59);
+            this.txtTitulo.Name = "txtTitulo";
+            this.txtTitulo.Size = new System.Drawing.Size(315, 20);
+            this.txtTitulo.TabIndex = 50;
             // 
             // Livros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(773, 510);
+            this.ClientSize = new System.Drawing.Size(773, 568);
+            this.Controls.Add(this.txtTitulo);
+            this.Controls.Add(this.txtAutor);
+            this.Controls.Add(this.txtGenero);
+            this.Controls.Add(this.txtEditora);
+            this.Controls.Add(this.txtQuantidade);
+            this.Controls.Add(this.txtISBN);
             this.Controls.Add(this.btnLimpar);
-            this.Controls.Add(this.btnAcoes);
             this.Controls.Add(this.btnAjuste);
+            this.Controls.Add(this.btnAcoes);
+            this.Controls.Add(this.btnUsuarios);
             this.Controls.Add(this.materialLabel6);
             this.Controls.Add(this.materialLabel5);
             this.Controls.Add(this.materialLabel4);
             this.Controls.Add(this.materialLabel3);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
-            this.Controls.Add(this.txtAutor);
-            this.Controls.Add(this.txtEditora);
-            this.Controls.Add(this.txtISBN);
-            this.Controls.Add(this.txtQuantidade);
-            this.Controls.Add(this.txtGenero);
-            this.Controls.Add(this.txtTitulo);
             this.Controls.Add(this.lboLivros);
             this.MaximizeBox = false;
             this.Name = "Livros";
@@ -329,21 +264,22 @@
 
         #endregion
         private System.Windows.Forms.ListBox lboLivros;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtTitulo;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtGenero;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtQuantidade;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtISBN;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtEditora;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtAutor;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private MaterialSkin.Controls.MaterialLabel materialLabel5;
         private MaterialSkin.Controls.MaterialLabel materialLabel6;
-        private MaterialSkin.Controls.MaterialFlatButton btnAjuste;
-        private MaterialSkin.Controls.MaterialFlatButton btnAcoes;
-        private MaterialSkin.Controls.MaterialFlatButton btnLimpar;
+        private System.Windows.Forms.Button btnUsuarios;
+        private System.Windows.Forms.Button btnAcoes;
+        private System.Windows.Forms.Button btnAjuste;
+        private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.TextBox txtISBN;
+        private System.Windows.Forms.TextBox txtQuantidade;
+        private System.Windows.Forms.TextBox txtEditora;
+        private System.Windows.Forms.TextBox txtGenero;
+        private System.Windows.Forms.TextBox txtAutor;
+        private System.Windows.Forms.TextBox txtTitulo;
     }
 }
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 
 namespace Biblioteca
 {
@@ -6,11 +7,11 @@ namespace Biblioteca
 
     partial class BibliotecaDBDataSet
     {
-        partial class LivrosDataTable
+        partial class UsuarioRow
         {
-            internal void Delete(int livroID)
+            public override string ToString()
             {
-                throw new NotImplementedException();
+                return UsuarioID.ToString() + "-" + Nome;
             }
         }
 
